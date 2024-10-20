@@ -23,6 +23,13 @@ final class GistsListCell: UITableViewCell {
         return view
     }()
     
+    private var activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .medium)
+        view.hidesWhenStopped = true
+        view.color = .darkText
+        return view
+    }()
+    
     private let ownerNameLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 17, weight: .semibold)
@@ -46,10 +53,12 @@ final class GistsListCell: UITableViewCell {
             guard let viewModel else {
                 return
             }
+            activityIndicator.startAnimating()
             ownerNameLabel.text = viewModel.ownerName
             titleLabel.text = viewModel.title
             Task {
                 let (image, urlString) = await imageLoader.fetchImage(with: viewModel.avatarURL)
+                activityIndicator.stopAnimating()
                 if urlString == viewModel.avatarURL {
                     avatar.image = image
                 }
@@ -81,6 +90,10 @@ private extension GistsListCell {
         avatar.snp.makeConstraints { make in
             make.width.height.equalTo(50)
             make.top.leading.equalToSuperview().inset(16)
+        }
+        addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalTo(avatar.snp.center)
         }
         addSubview(ownerNameLabel)
         ownerNameLabel.snp.makeConstraints { make in

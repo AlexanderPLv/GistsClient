@@ -172,6 +172,7 @@ extension GistsListScreen: UITableViewDelegate, UITableViewDataSource {
             ownerName: item.owner.login,
             title: item.title ?? ""
         )
+        cell.selectionStyle = .none
         return cell
     }
 }

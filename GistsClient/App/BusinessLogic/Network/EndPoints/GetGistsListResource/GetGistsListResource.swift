@@ -9,6 +9,7 @@ import Foundation
 
 struct GetGistsListResource: EndPointType {
     typealias ModelType = Gist
+    var urlString: String? = nil
     let host: BaseURL = .github
     let path: Path = .gists
     let httpMethod: HTTPMethod = .get

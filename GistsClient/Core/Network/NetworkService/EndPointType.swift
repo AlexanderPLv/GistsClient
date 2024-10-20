@@ -9,6 +9,7 @@ import Foundation
 
 protocol EndPointType {
     associatedtype ModelType: Decodable
+    var urlString: String? { get }
     var host: BaseURL { get }
     var path: Path { get }
     var httpMethod: HTTPMethod { get }
@@ -18,13 +19,17 @@ protocol EndPointType {
 
 extension EndPointType {
     func url() -> URL? {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = host.baseURL
-        components.path = path.path
-        components.queryItems = queryItems
-        guard let url = components.url else { return nil }
-        return url
+        if let urlString {
+            return URL(string: urlString)
+        } else {
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = host.baseURL
+            components.path = path.path
+            components.queryItems = queryItems
+            guard let url = components.url else { return nil }
+            return url
+        }
     }
 }
 

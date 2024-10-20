@@ -21,6 +21,17 @@ final class RequestFactory {
 
 extension RequestFactory {
     
+    func makeCommitsRequest() -> GetCommitsRequestFactory {
+        let serializer = DecodableSerializer<Commit>()
+        let encoder = GetRequestEncoder()
+        let request = GetCommitsRequest(
+            sessionManager: commonSession,
+            serializer: serializer,
+            encoder: encoder
+        )
+        return request
+    }
+    
     func makeImageRequest() -> GetImageRequestFactory {
         let request = GetImageRequest(
             sessionManager: commonSession,

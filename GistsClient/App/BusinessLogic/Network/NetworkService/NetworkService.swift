@@ -9,6 +9,7 @@ import UIKit
 
 protocol NetworkService {
     func getGistsList(page: Int, completion: @escaping (Result<[Gist], Error>) -> Void)
+    func getCommits(urlString: String?, completion: @escaping (Result<[Commit], Error>) -> Void)
 }
 
 protocol ImageLoader {
@@ -19,12 +20,19 @@ final class NetworkServiceImpl: NetworkService, ImageLoader {
     
     static let shared = NetworkServiceImpl()
     private let requestFactory: RequestFactory
-    private var cachedGists = [Gist]()
     
     private init(
         requestFactory: RequestFactory = RequestFactory.shared
     ) {
         self.requestFactory = requestFactory
+    }
+    
+    func getCommits(
+        urlString: String?,
+        completion: @escaping (Result<[Commit], Error>) -> Void
+    ) {
+        let request = requestFactory.makeCommitsRequest()
+        request.get(urlString: urlString, completion: completion)
     }
     
     func fetchImage(with urlString: String?) async -> (UIImage, String?) {

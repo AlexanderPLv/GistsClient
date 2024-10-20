@@ -9,9 +9,18 @@
 /* Begin PBXBuildFile section */
 		C90865F02CC4AF110051EA71 /* GistsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90865EF2CC4AF110051EA71 /* GistsCache.swift */; };
 		C90865F42CC4B6690051EA71 /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90865F32CC4B6690051EA71 /* DetailsScreenViewModel.swift */; };
+		C90865F72CC4D58A0051EA71 /* GistDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90865F62CC4D58A0051EA71 /* GistDetailsCell.swift */; };
+		C90865FA2CC56BE80051EA71 /* GistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90865F92CC56BE80051EA71 /* GistFile.swift */; };
+		C90865FD2CC56C370051EA71 /* GistOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90865FC2CC56C370051EA71 /* GistOwner.swift */; };
+		C90866002CC56DC30051EA71 /* GistDetailsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90865FF2CC56DC30051EA71 /* GistDetailsSectionHeader.swift */; };
+		C90866032CC576F00051EA71 /* GistDetailsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90866022CC576F00051EA71 /* GistDetailsContentCell.swift */; };
+		C90866062CC586FB0051EA71 /* FileContentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90866052CC586FB0051EA71 /* FileContentScreen.swift */; };
+		C90866092CC5982A0051EA71 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90866082CC5982A0051EA71 /* Commit.swift */; };
+		C908660C2CC59AE90051EA71 /* GetCommitsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908660B2CC59AE90051EA71 /* GetCommitsRequest.swift */; };
+		C908660F2CC5ADA80051EA71 /* GistCommitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908660E2CC5ADA80051EA71 /* GistCommitsCell.swift */; };
 		C90F5C882CC0BD0500465A8C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C802CC0BD0500465A8C /* RequestFactory.swift */; };
 		C90F5C892CC0BD0500465A8C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C792CC0BD0500465A8C /* NetworkService.swift */; };
-		C90F5C8A2CC0BD0500465A8C /* GetImageListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C842CC0BD0500465A8C /* GetImageListResource.swift */; };
+		C90F5C8A2CC0BD0500465A8C /* GetCommitsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C842CC0BD0500465A8C /* GetCommitsResource.swift */; };
 		C90F5C8B2CC0BD0500465A8C /* GetImageListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C7D2CC0BD0500465A8C /* GetImageListRequest.swift */; };
 		C90F5C8C2CC0BD0500465A8C /* GetGistsListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C822CC0BD0500465A8C /* GetGistsListResource.swift */; };
 		C90F5C8D2CC0BD0500465A8C /* GistsListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F5C7B2CC0BD0500465A8C /* GistsListRequest.swift */; };
@@ -54,12 +63,21 @@
 /* Begin PBXFileReference section */
 		C90865EF2CC4AF110051EA71 /* GistsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsCache.swift; sourceTree = "<group>"; };
 		C90865F32CC4B6690051EA71 /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
+		C90865F62CC4D58A0051EA71 /* GistDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsCell.swift; sourceTree = "<group>"; };
+		C90865F92CC56BE80051EA71 /* GistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFile.swift; sourceTree = "<group>"; };
+		C90865FC2CC56C370051EA71 /* GistOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistOwner.swift; sourceTree = "<group>"; };
+		C90865FF2CC56DC30051EA71 /* GistDetailsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsSectionHeader.swift; sourceTree = "<group>"; };
+		C90866022CC576F00051EA71 /* GistDetailsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsContentCell.swift; sourceTree = "<group>"; };
+		C90866052CC586FB0051EA71 /* FileContentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileContentScreen.swift; sourceTree = "<group>"; };
+		C90866082CC5982A0051EA71 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		C908660B2CC59AE90051EA71 /* GetCommitsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommitsRequest.swift; sourceTree = "<group>"; };
+		C908660E2CC5ADA80051EA71 /* GistCommitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistCommitsCell.swift; sourceTree = "<group>"; };
 		C90F5C792CC0BD0500465A8C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C90F5C7B2CC0BD0500465A8C /* GistsListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRequest.swift; sourceTree = "<group>"; };
 		C90F5C7D2CC0BD0500465A8C /* GetImageListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageListRequest.swift; sourceTree = "<group>"; };
 		C90F5C802CC0BD0500465A8C /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		C90F5C822CC0BD0500465A8C /* GetGistsListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGistsListResource.swift; sourceTree = "<group>"; };
-		C90F5C842CC0BD0500465A8C /* GetImageListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageListResource.swift; sourceTree = "<group>"; };
+		C90F5C842CC0BD0500465A8C /* GetCommitsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommitsResource.swift; sourceTree = "<group>"; };
 		C90F5C8E2CC0BDB000465A8C /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		C90F5C902CC0BDB000465A8C /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		C90F5C912CC0BDB000465A8C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -125,6 +143,78 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		C90865F52CC4D5520051EA71 /* GistDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C90865F62CC4D58A0051EA71 /* GistDetailsCell.swift */,
+			);
+			path = GistDetailsCell;
+			sourceTree = "<group>";
+		};
+		C90865F82CC56BE40051EA71 /* GistFile */ = {
+			isa = PBXGroup;
+			children = (
+				C90865F92CC56BE80051EA71 /* GistFile.swift */,
+			);
+			path = GistFile;
+			sourceTree = "<group>";
+		};
+		C90865FB2CC56C2C0051EA71 /* GistOwner */ = {
+			isa = PBXGroup;
+			children = (
+				C90865FC2CC56C370051EA71 /* GistOwner.swift */,
+			);
+			path = GistOwner;
+			sourceTree = "<group>";
+		};
+		C90865FE2CC56DB50051EA71 /* GistDetailsSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C90865FF2CC56DC30051EA71 /* GistDetailsSectionHeader.swift */,
+			);
+			path = GistDetailsSectionHeader;
+			sourceTree = "<group>";
+		};
+		C90866012CC576E30051EA71 /* GistDetailsContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				C90866022CC576F00051EA71 /* GistDetailsContentCell.swift */,
+			);
+			path = GistDetailsContentCell;
+			sourceTree = "<group>";
+		};
+		C90866042CC586E20051EA71 /* FileContentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C90866052CC586FB0051EA71 /* FileContentScreen.swift */,
+			);
+			path = FileContentScreen;
+			sourceTree = "<group>";
+		};
+		C90866072CC598230051EA71 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				C90866082CC5982A0051EA71 /* Commit.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		C908660A2CC59AD80051EA71 /* GetCommitsRequest */ = {
+			isa = PBXGroup;
+			children = (
+				C908660B2CC59AE90051EA71 /* GetCommitsRequest.swift */,
+			);
+			path = GetCommitsRequest;
+			sourceTree = "<group>";
+		};
+		C908660D2CC5AD8D0051EA71 /* GistCommitsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C908660E2CC5ADA80051EA71 /* GistCommitsCell.swift */,
+			);
+			path = GistCommitsCell;
+			sourceTree = "<group>";
+		};
 		C90F5C7A2CC0BD0500465A8C /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +242,7 @@
 		C90F5C7F2CC0BD0500465A8C /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				C908660A2CC59AD80051EA71 /* GetCommitsRequest */,
 				C90F5C7C2CC0BD0500465A8C /* GistsListRequest */,
 				C90F5C7E2CC0BD0500465A8C /* GetImageListRequest */,
 			);
@@ -174,19 +265,19 @@
 			path = GetGistsListResource;
 			sourceTree = "<group>";
 		};
-		C90F5C852CC0BD0500465A8C /* GetImageListResource */ = {
+		C90F5C852CC0BD0500465A8C /* GetCommitsResource */ = {
 			isa = PBXGroup;
 			children = (
-				C90F5C842CC0BD0500465A8C /* GetImageListResource.swift */,
+				C90F5C842CC0BD0500465A8C /* GetCommitsResource.swift */,
 			);
-			path = GetImageListResource;
+			path = GetCommitsResource;
 			sourceTree = "<group>";
 		};
 		C90F5C862CC0BD0500465A8C /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
 				C90F5C832CC0BD0500465A8C /* GetGistsListResource */,
-				C90F5C852CC0BD0500465A8C /* GetImageListResource */,
+				C90F5C852CC0BD0500465A8C /* GetCommitsResource */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -266,8 +357,8 @@
 		C90F5C9E2CC0BDB000465A8C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C90F5C8F2CC0BDB000465A8C /* NetworkErrors */,
 				C90F5C932CC0BDB000465A8C /* NetworkService */,
+				C90F5C8F2CC0BDB000465A8C /* NetworkErrors */,
 				C90F5C9B2CC0BDB000465A8C /* ParameterEncoding */,
 				C90F5C9D2CC0BDB000465A8C /* Serializer */,
 			);
@@ -277,6 +368,10 @@
 		C90F5CAF2CC1E69400465A8C /* components */ = {
 			isa = PBXGroup;
 			children = (
+				C908660D2CC5AD8D0051EA71 /* GistCommitsCell */,
+				C90866012CC576E30051EA71 /* GistDetailsContentCell */,
+				C90865FE2CC56DB50051EA71 /* GistDetailsSectionHeader */,
+				C90865F52CC4D5520051EA71 /* GistDetailsCell */,
 				C90F5CB02CC1E6A100465A8C /* GistsListCell */,
 			);
 			path = components;
@@ -395,8 +490,8 @@
 		C99E1DD22CBF8D17002E7DF7 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C99E1E052CBFF7F9002E7DF7 /* BusinessLogic */,
 				C99E1DD32CBF8D25002E7DF7 /* Delegates */,
+				C99E1E052CBFF7F9002E7DF7 /* BusinessLogic */,
 				C99E1DFC2CBFF6DE002E7DF7 /* Assembly */,
 			);
 			path = App;
@@ -415,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				C90F5CAF2CC1E69400465A8C /* components */,
+				C90866042CC586E20051EA71 /* FileContentScreen */,
 				C99E1E022CBFF736002E7DF7 /* DetailsScreen */,
 				C99E1DFF2CBFF712002E7DF7 /* ListScreen */,
 				C99E1DF22CBFF565002E7DF7 /* OnboardingScreen */,
@@ -585,17 +681,20 @@
 		C99E1E092CBFF883002E7DF7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C99E1E0B2CBFF894002E7DF7 /* GistInfo */,
+				C90866072CC598230051EA71 /* Commit */,
+				C90865FB2CC56C2C0051EA71 /* GistOwner */,
+				C90865F82CC56BE40051EA71 /* GistFile */,
+				C99E1E0B2CBFF894002E7DF7 /* Gist */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		C99E1E0B2CBFF894002E7DF7 /* GistInfo */ = {
+		C99E1E0B2CBFF894002E7DF7 /* Gist */ = {
 			isa = PBXGroup;
 			children = (
 				C99E1E0C2CBFF8A5002E7DF7 /* Gist.swift */,
 			);
-			path = GistInfo;
+			path = Gist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,15 +775,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99E1DC82CBF82AC002E7DF7 /* AppDelegate.swift in Sources */,
+				C908660C2CC59AE90051EA71 /* GetCommitsRequest.swift in Sources */,
 				C99E1DC92CBF82AC002E7DF7 /* SceneDelegate.swift in Sources */,
+				C908660F2CC5ADA80051EA71 /* GistCommitsCell.swift in Sources */,
 				C99E1DE92CBFF406002E7DF7 /* Routable.swift in Sources */,
 				C90F5CC52CC1F55D00465A8C /* UITableViewCell+Ext.swift in Sources */,
 				C99E1DFD2CBFF6DE002E7DF7 /* ModulesFactory.swift in Sources */,
+				C90865F72CC4D58A0051EA71 /* GistDetailsCell.swift in Sources */,
+				C90865FD2CC56C370051EA71 /* GistOwner.swift in Sources */,
 				C99E1E042CBFF73E002E7DF7 /* DetailsScreen.swift in Sources */,
 				C90F5C9F2CC0BDB000465A8C /* HTTPHeaderFields.swift in Sources */,
 				C90F5CA02CC0BDB000465A8C /* DecodableSerializer.swift in Sources */,
 				C90F5CA12CC0BDB000465A8C /* EndPointType.swift in Sources */,
+				C90865FA2CC56BE80051EA71 /* GistFile.swift in Sources */,
 				C90F5CA22CC0BDB000465A8C /* GetRequestEncoder.swift in Sources */,
+				C90866002CC56DC30051EA71 /* GistDetailsSectionHeader.swift in Sources */,
 				C90F5CA32CC0BDB000465A8C /* HTTPMethod.swift in Sources */,
 				C90F5CC22CC1F41B00465A8C /* UICollectionReusableView+Ext.swift in Sources */,
 				C90F5CA42CC0BDB000465A8C /* NetworkErrors.swift in Sources */,
@@ -698,7 +803,10 @@
 				C99E1DEB2CBFF406002E7DF7 /* Router.swift in Sources */,
 				C99E1DEC2CBFF406002E7DF7 /* AppCoordinator.swift in Sources */,
 				C99E1DF72CBFF5D4002E7DF7 /* Cache.swift in Sources */,
+				C90866062CC586FB0051EA71 /* FileContentScreen.swift in Sources */,
+				C90866032CC576F00051EA71 /* GistDetailsContentCell.swift in Sources */,
 				C99E1DED2CBFF406002E7DF7 /* CoordinatorFactory.swift in Sources */,
+				C90866092CC5982A0051EA71 /* Commit.swift in Sources */,
 				C99E1DEE2CBFF406002E7DF7 /* Presentable.swift in Sources */,
 				C99E1E012CBFF716002E7DF7 /* GistsListScreen.swift in Sources */,
 				C99E1DF42CBFF56C002E7DF7 /* OnboardingScreen.swift in Sources */,
@@ -708,7 +816,7 @@
 				C99E1DF12CBFF406002E7DF7 /* MainCoordinator.swift in Sources */,
 				C90F5C882CC0BD0500465A8C /* RequestFactory.swift in Sources */,
 				C90F5C892CC0BD0500465A8C /* NetworkService.swift in Sources */,
-				C90F5C8A2CC0BD0500465A8C /* GetImageListResource.swift in Sources */,
+				C90F5C8A2CC0BD0500465A8C /* GetCommitsResource.swift in Sources */,
 				C90F5CBE2CC1EB7B00465A8C /* ListScreenViewModel.swift in Sources */,
 				C90F5C8B2CC0BD0500465A8C /* GetImageListRequest.swift in Sources */,
 				C90865F02CC4AF110051EA71 /* GistsCache.swift in Sources */,

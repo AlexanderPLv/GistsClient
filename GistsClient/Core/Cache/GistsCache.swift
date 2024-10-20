@@ -22,4 +22,8 @@ final class GistsCache {
         cache.removeAll()
         cache = gists
     }
+    
+    func purge() {
+        cache.removeAll()
+    }
 }

@@ -12,6 +12,7 @@ typealias CompletionBlock = (() -> Void)
 protocol Routable: Presentable {
 
     func present(_ module: Presentable?)
+    func presentPopover(_ module: Presentable?, animated: Bool)
     func presentFullScreen(_ module: Presentable?, animated: Bool)
     func presentOverFullScreen(_ module: Presentable?, animated: Bool)
     func presentFullScreenFromModalController(_ module: Presentable?, animated: Bool)

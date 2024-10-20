@@ -33,7 +33,7 @@ final class ListScreenViewModelImpl: ListScreenViewModel {
     private var page = 1
     private var isFetchInProgress = false
     
-    var items = [Gist]()
+    private var items = [Gist]()
     var totalCount: Int {
         items.count
     }
@@ -44,6 +44,7 @@ final class ListScreenViewModelImpl: ListScreenViewModel {
     ) {
         self.networkService = networkService
         self.items = gistsCache.get()
+        gistsCache.purge()
     }
     
     func item(at index: Int) -> Gist {

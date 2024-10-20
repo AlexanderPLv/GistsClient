@@ -36,16 +36,23 @@ extension MainCoordinator: Coordinator {
 private extension MainCoordinator {
     func performFlow() {
         let view = factory.buildListScreen()
-        view.onDetailScreen = { [weak self] info in
-            self?.runDetailScreen(info: info)
+        view.onDetailScreen = { [weak self] gist in
+            self?.runDetailScreen(gist: gist)
         }
         router.setRootModule(view, hideBar: true)
     }
     
-    func runDetailScreen(info: Gist) {
-        let view = factory.buildDetailsScreen(info: info)
-        view.close = pop
+    func runDetailScreen(gist: Gist) {
+        let view = factory.buildDetailsScreen(gist: gist)
+        view.onContentScreen = { [weak self] url in
+            self?.runFileContentScreen(url: url)
+        }
         router.push(view, animated: true)
+    }
+    
+    func runFileContentScreen(url: URL) {
+        let view = factory.buildFileContentScreen(url: url)
+        router.presentPopover(view, animated: true)
     }
     
     func pop() {

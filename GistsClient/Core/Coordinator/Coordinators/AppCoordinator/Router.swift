@@ -36,6 +36,12 @@ extension Router: Routable {
     func present(_ module: Presentable?) {
         presentFullScreen(module, animated: true)
     }
+    
+    func presentPopover(_ module: Presentable?, animated: Bool) {
+        guard let controller = module?.toPresent else { return }
+        controller.modalPresentationStyle = .popover
+        rootController?.present(controller, animated: animated, completion: nil)
+    }
 
     func presentFullScreen(_ module: Presentable?, animated: Bool) {
         guard let controller = module?.toPresent else { return }

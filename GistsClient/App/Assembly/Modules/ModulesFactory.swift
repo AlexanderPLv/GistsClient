@@ -13,7 +13,8 @@ protocol OnboardingBuilderProtocol {
 
 protocol MainBuilderProtocol {
     func buildListScreen() -> GistsListScreen
-    func buildDetailsScreen(info: Gist) -> DetailsScreen
+    func buildDetailsScreen(gist: Gist) -> DetailsScreen
+    func buildFileContentScreen(url: URL) -> FileContentScreen
 }
 
 final class ModulesFactory {
@@ -44,8 +45,14 @@ extension ModulesFactory: MainBuilderProtocol {
         return controller
     }
     
-    func buildDetailsScreen(info: Gist) -> DetailsScreen {
-        let controller = DetailsScreen(info: info)
+    func buildDetailsScreen(gist: Gist) -> DetailsScreen {
+        let viewModel = DetailsScreenViewModelImpl(gist: gist, networkService: networkService)
+        let controller = DetailsScreen(viewModel: viewModel)
+        return controller
+    }
+    
+    func buildFileContentScreen(url: URL) -> FileContentScreen {
+        let controller = FileContentScreen(url: url)
         return controller
     }
 }
