@@ -18,7 +18,10 @@ final class OnBoardingCoordinator: BaseCoordinator, OnBoardingCoordinatorOutput 
     fileprivate let factory: OnboardingBuilderProtocol
     fileprivate let router: Routable
     
-    init(router: Routable, factory: OnboardingBuilderProtocol) {
+    init(
+        router: Routable,
+        factory: OnboardingBuilderProtocol
+    ) {
         self.router = router
         self.factory = factory
     }

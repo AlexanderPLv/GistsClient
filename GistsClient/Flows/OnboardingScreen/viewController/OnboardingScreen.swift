@@ -18,12 +18,12 @@ final class OnboardingScreen: UIViewController {
         return view
     }()
     
-    private let networkService: NetworkService
+    private let viewModel: OnboardingScreenViewModel
     
     init(
-        networkService: NetworkService
+        viewModel: OnboardingScreenViewModel
     ) {
-        self.networkService = networkService
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,6 +34,11 @@ final class OnboardingScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        viewModel.prefetchData { [weak self] in
+            Task { @MainActor in
+                self?.close?()
+            }
+        }
     }
 }
 
@@ -45,7 +50,7 @@ private extension OnboardingScreen {
         view.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.width.height.equalTo(300)
-            make.center.equalToSuperview()
+            make.center.equalTo(view.safeAreaLayoutGuide.snp.center)
         }
     }
 }

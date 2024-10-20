@@ -18,7 +18,10 @@ final class MainCoordinator: BaseCoordinator, MainCoordinatorOutput {
     fileprivate let factory: MainBuilderProtocol
     fileprivate let router: Routable
     
-    init(router: Routable, factory: MainBuilderProtocol) {
+    init(
+        router: Routable,
+        factory: MainBuilderProtocol
+    ) {
         self.router = router
         self.factory = factory
     }
@@ -39,7 +42,7 @@ private extension MainCoordinator {
         router.setRootModule(view, hideBar: true)
     }
     
-    func runDetailScreen(info: GistInfo) {
+    func runDetailScreen(info: Gist) {
         let view = factory.buildDetailsScreen(info: info)
         view.close = pop
         router.push(view, animated: true)

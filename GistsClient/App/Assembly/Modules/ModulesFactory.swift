@@ -12,17 +12,14 @@ protocol OnboardingBuilderProtocol {
 }
 
 protocol MainBuilderProtocol {
-    func buildListScreen() -> ListScreen
-    func buildDetailsScreen(info: GistInfo) -> DetailsScreen
+    func buildListScreen() -> GistsListScreen
+    func buildDetailsScreen(info: Gist) -> DetailsScreen
 }
 
 final class ModulesFactory {
    
-    private let networkService = NetworkService()
-    
-    init() {
-        
-    }
+    private let networkService = NetworkServiceImpl.shared
+    private let gistsCache = GistsCache.shared
     
     class func build() -> ModulesFactory {
         let factory = ModulesFactory()
@@ -33,19 +30,21 @@ final class ModulesFactory {
 extension ModulesFactory: OnboardingBuilderProtocol {
     
     func buildOnboardingScreen() -> OnboardingScreen {
-        let controller = OnboardingScreen(networkService: networkService)
+        let viewModel = OnboardingScreenViewModelImpl(networkService: networkService, gistsCache: gistsCache)
+        let controller = OnboardingScreen(viewModel: viewModel)
         return controller
     }
 }
 
 extension ModulesFactory: MainBuilderProtocol {
     
-    func buildListScreen() -> ListScreen {
-        let controller = ListScreen()
+    func buildListScreen() -> GistsListScreen {
+        let viewModel = ListScreenViewModelImpl(networkService: networkService, gistsCache: gistsCache)
+        let controller = GistsListScreen(viewModel: viewModel)
         return controller
     }
     
-    func buildDetailsScreen(info: GistInfo) -> DetailsScreen {
+    func buildDetailsScreen(info: Gist) -> DetailsScreen {
         let controller = DetailsScreen(info: info)
         return controller
     }

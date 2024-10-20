@@ -12,10 +12,10 @@ final class DetailsScreen: UIViewController {
     
     var close: CompletionBlock?
     
-    private let info: GistInfo
+    private let info: Gist
     
     init(
-        info: GistInfo
+        info: Gist
     ) {
         self.info = info
         super.init(nibName: nil, bundle: nil)
